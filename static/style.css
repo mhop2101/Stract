@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+  margin: 0;
+}
+
+/*NAV*/
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background-color: rgba(255, 255, 255, 0.4)!important;
+  z-index: 1;
+}
+.navbar-nav li {
+  padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #152033;
+}
+/*NAV*/
+
+/*Landing*/
+.home-inner {
+  background-image: url("../static/b.png");
+}
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 38%;
+  z-index: 1;
+  color: white;
+}
+
+.btn-lg {
+  border-width: medium;
+  border-radius: 0;
+  padding: .6rem 1.3rem;
+  font-size: 1.1rem;
+}
+#logo {
+  width: 100px;
+  height: 33px;
+}
+@media only screen and (max-width: 400px) {
+  #logo {
+    width: 50px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 543px) {
+  .caption {
+    top: 18%;
+  }
+}
+@media only screen and (max-width: 511px) {
+  .caption {
+    top: 22%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .caption {
+    top: 13%;
+  }
+}
+/*Landing*/
+
+/*GET started*/
+.underline{
+  width: 100px;
+  height: 3px;
+  background-color: #152033;
+
+}
+.section-getstarted_style i {
+  color: #152033;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.section-getstarted_style {
+  margin: 0;
+  background-color:#dae6f5;
+}
+/*GET started*/
+/*Stract*/
+#section-stract img {
+ width: 400px;
+}
+#section-stract {
+  background-color: #123951;
+}
+/*Stract*/
+
+/*What*/
+#section-what {
+  border-left: 5px dotted #000;
+  background-color: #382d3f;
+}
+#section-what iframe {
+  width: 600px;
+  height: 340px;
+}
+@media only screen and (max-width: 702px) {
+  #section-what iframe {
+    width: 300px;
+    height: 170px;
+  }
+}
+/*What*/
+
+/*socket*/
+footer {
+  background-color: #141026;
+  border-top: 2px solid #152033;
+}
+.socket {
+  width: 100%;
+  height: 0.03rem;
+  background: #fff;
+  color: #fff;
+}
+/*socket*/
+
+
+@media only screen and (max-width: 543px) {
+  .wow{
+        animation-name: none !important;
+        visibility: visible !important;
+    }
+}

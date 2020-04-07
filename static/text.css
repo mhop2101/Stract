@@ -1,0 +1,68 @@
+/*LANDING*/
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+#brand {
+  font-family: 'Aclonica', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: 1rem;
+}
+.caption h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: 1rem;
+}
+.caption h3 {
+  font-size: 2rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 1.6rem;
+}
+@media only screen and (max-width: 500px) {
+  .caption h1 {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .caption h1 {
+    font-size: 3rem;
+  }
+}
+/*LANDING*/
+
+/*get started*/
+.section-getstarted_style h2{
+  color: #394d70;
+  font-size: 2.7rem;
+  padding-top: 1rem;
+}
+.section-getstarted_style h3 {
+  font-size: 2rem;
+  color: #394d70;
+}
+.section-getstarted_style p {
+  color: #151c29;
+}
+/*get started*/
+/*Stract*/
+#section-stract h2 {
+  color: #dcdcdc;
+  font-size: 2.7rem;
+  padding-top: 1rem;
+}
+/*Stract*/
+/*What*/
+#section-what h2 {
+  color: #dcdcdc;
+  font-size: 2.7rem;
+  padding-top: 1rem;
+}
+/*What*/
+ /*Footer*/
+ footer p {
+   color: white;
+   margin-bottom: 5px;
+ }
+ /*Footer*/
