@@ -24,19 +24,27 @@ def home():
                 ext = ".csv"
                 charset = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 uniform_resource_locator = request.form.get('uniform_resource_locator')
-                print(uniform_resource_locator)
-                formating = url_parser(uniform_resource_locator)
-                fname = retrieve_relevant_info(uniform_resource_locator)
-                UID = "".join(random.sample(charset,16))
-                fname = fname + UID + ext
-                taken_time , finish_time = get_avg_time(uniform_resource_locator)
-                timetwo = datetime.datetime.now()
-                print(str(timetwo-timeone))
-                flash("Los datos se descargarán en aproximadamente <b>{} horas {} minutos y {} segundos</b> | terminando en {} UTC-5 | <b>NO CIERRE ESTA PESTAÑA</b> | Cuando se descargue, haz click en el botón <b>Se ha descargado mi archivo</b>".format(taken_time[0],taken_time[1],taken_time[2],finish_time),
-                'success')
-                return redirect(url_for('time'))
-                #scrape.scrape(uniform_resource_locator,formating,fname)
-                #return send_file(fname,as_attachment=True)
+                password = request.form.get('password')
+                if password == 'Stract':
+                    print(uniform_resource_locator)
+                    formating = url_parser(uniform_resource_locator)
+                    fname = retrieve_relevant_info(uniform_resource_locator)
+                    UID = "".join(random.sample(charset,16))
+                    fname = fname + UID + ext
+                    taken_time , finish_time = get_avg_time(uniform_resource_locator)
+                    timetwo = datetime.datetime.now()
+                    print(str(timetwo-timeone))
+                    if taken_time[1] => 10:
+                        flash("Intente con una nueva direccion, la actual contiene mas de 800 resultados","danger")
+                        return render_template("index.html")
+                    flash("Los datos se descargarán en aproximadamente <b>{} horas {} minutos y {} segundos</b> | terminando en {} UTC-5 | <b>NO CIERRE ESTA PESTAÑA</b> | Cuando se descargue, haz click en el botón <b>Se ha descargado mi archivo</b>".format(taken_time[0],taken_time[1],taken_time[2],finish_time),
+                    'success')
+                    return redirect(url_for('time'))
+                    #scrape.scrape(uniform_resource_locator,formating,fname)
+                    #return send_file(fname,as_attachment=True)
+                else:
+                    flash("Contraseña incorrecta","danger")
+                    return render_template("index.html")
             except IndexError:
                 flash("error","danger")
                 return redirect(url_for("home"))
