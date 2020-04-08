@@ -9,6 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import random
+import os
 #from IPython.core.interactiveshell import InteractiveShell
 #InteractiveShell.ast_node_interactivity = "all"
 #pandas.options.display.max_rows = 500
@@ -250,8 +251,8 @@ def scrape(url,strfrmt,name):
 
     # In[49]:
 
-
-    export_csv = df.to_csv(name)
+    
+    export_csv = df.to_csv(os.getcwd()+"/stract/static/results/"+name)
 
 
     # In[ ]:
