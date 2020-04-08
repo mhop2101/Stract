@@ -1,1 +1,1 @@
-web:gunicorn stract:app
+Web:gunicorn stract:app
