@@ -34,7 +34,7 @@ def home():
                     taken_time , finish_time = get_avg_time(uniform_resource_locator)
                     timetwo = datetime.datetime.now()
                     print(str(timetwo-timeone))
-                    if taken_time[1] => 10:
+                    if int(taken_time[1]) >= 10:
                         flash("Intente con una nueva direccion, la actual contiene mas de 800 resultados","danger")
                         return render_template("index.html")
                     flash("Los datos se descargarán en aproximadamente <b>{} horas {} minutos y {} segundos</b> | terminando en {} UTC-5 | <b>NO CIERRE ESTA PESTAÑA</b> | Cuando se descargue, haz click en el botón <b>Se ha descargado mi archivo</b>".format(taken_time[0],taken_time[1],taken_time[2],finish_time),
