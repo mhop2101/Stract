@@ -213,13 +213,26 @@ def scrape(url,strfrmt,name):
 
         except IndexError:
             sect_list.append("0")
-            m2_list.append("")
+            m2_list.append("0")
             status_list.append("0")
             print("0 objects")
 
+        print('\n')
+        print("Names: ",len(names_list))
+        print("Sect len",len(sect_list))
+        print("Rooms len",len(rooms_list))
         print("bathroom_lenght ",len(bathrooms_list))
-        print("m2_lenght ",len(m2_list))
+        print("Garages len",len(garages_list))
+        print("Areas len",len(areas_list))
         print("status_lenght",len(status_list))
+        print("Antiguedad len",len(antique_list))
+        print("Estado len",len(state_list))
+        print("Piso len",len(floorNumber_list))
+        print("Admin len",len(adminvalue_list))
+        print("Prices len",len(prices_list))
+        print("m2_lenght ",len(m2_list))
+        print("Url",len(url_list))
+
         print(int((progress/total)*100),"Percent\n\n")
         progress += 1
 
@@ -232,8 +245,8 @@ def scrape(url,strfrmt,name):
         "Antigüedad":antique_list,"Estado":state_list,"Piso":floorNumber_list,"URL":url_list}
         df = pandas.DataFrame(data=info)
     else:
-        info = {"Titulo":names_list,"Sector":sect_list,"Cuartos":rooms_list,
-        "Baños":bathrooms_list,"Garages":garages_list,"Area":areas_list,
+        info = {"Titulo":names_list,"Sector":sect_list,
+        "Baños":bathrooms_list,"Area":areas_list,
         "Estrato":status_list,"Antigüedad":antique_list,"Estado":state_list,
         "Piso":floorNumber_list,"Adminstracion":adminvalue_list,"Price":prices_list,
         "Precio_x_Metro":m2_list,"URL":url_list}
@@ -251,7 +264,7 @@ def scrape(url,strfrmt,name):
 
     # In[49]:
 
-    
+
     export_csv = df.to_csv(os.getcwd()+"/stract/static/results/"+name)
 
 

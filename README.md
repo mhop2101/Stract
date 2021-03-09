@@ -1,17 +1,19 @@
-# finca_raiz_scraper
-Scraper for https://www.fincaraiz.com.co
+# Stract
+### Flask & BS4 based scraper for [www.fincaraiz.com.co](https://www.fincaraiz.com.co/)
+---
+### Getting started
 
-## Getting started
-##### pip3 install -r requirements.txt
-#####
-##### python3 Finca_Raiz_Scraper.py
+```
+pip3 install -r requirements.txt
+```
 
-## Modifying search parameters
-### Go to the website, get the url and
-### Replace it for the one in line 19 and 42
-#### https://www.fincaraiz.com.co/venta/colombia/index.aspx?ad=30|1||||1||||||||||||||||||||||||||w|||||||&pc=1
+### Run the app
 
-### Finally
->Change the number after the 30 to {}
-#### https://www.fincaraiz.com.co/venta/colombia/index.aspx?ad=30|{}||||1||||||||||||||||||||||||||w|||||||&pc=1
-### and replace this one on line 45
+```
+python app.py
+```
+
+## Usage
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=UK7Ps4nEHfY
+" target="_blank"><img src="http://img.youtube.com/vi/UK7Ps4nEHfY/0.jpg"
+alt="Stract video tutorial" width="" height="" border="0" /></a>
